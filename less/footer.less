@@ -2,11 +2,43 @@
   width: 100%;
   border-top: 2px dashed silver;
   background: @sandy-beach;
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   
   p {
     text-align: center;
     color: @font-color;
     font-size: 1.6rem;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  
+
+  .btn {
+    width: 200px; 
+    background-color: @sandy-beach;
+    color:white;
+    display: block;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+  
+      
+    &:hover {
+      background-color: lightblue;
+      color: white;
+    }
+    
+    @media @tablet {
+      width: 90%;
+      height: 50px;
+      font-size: 2.5rem;
+    }
   }
 }

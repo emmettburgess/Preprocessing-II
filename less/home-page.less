@@ -1,11 +1,12 @@
 .home {
 
   header {
-    border-bottom: 1px solid black;
-    margin: 20px 0;
+    border-bottom: 1px dashed black;
+    margin: 20px 20px;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
+    align-content: flex-start;
   
    @media @mobile {
       flex-direction: column;
@@ -13,7 +14,7 @@
     }
   
     h1 {
-      font-size: 2rem;
+      font-size: 5rem;
       color: black;
   
       @media @mobile {
@@ -23,26 +24,38 @@
   }//header
 
   .content-section {
-    margin: 30px 0;
+    margin: 30px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
-
+      font-family: 'Roboto', sans-serif;
+      @media @mobile {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 1%;
+      }
+        }
     .img-content {
-      width: 48%;
+      width: auto;
       padding-left: 1%;
-
       img {
         border-radius: 10px;
+        margin: 40px;
+        }
+        @media @mobile {
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin: 1%;
+        }
       }
-    }
+     
   }
 
   .inverse-content {
@@ -52,12 +65,27 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      font-family: 'Roboto', sans-serif;
+      @media @mobile {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
     }
+   
   }
 
   .content-destination {
@@ -74,10 +102,48 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    margin: 40px;
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      width: auto%;
+      margin-right: 30px;
+      font-family: 'Roboto', sans-serif;
     }
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  .btn-bottom {
+    width: 200px; 
+    background-color: teal;
+    color:white;
+    display: block;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 15px;
+  
+      
+    &:hover {
+      background-color: lightblue;
+      color: white;
+    }
+    
+    @media @tablet {
+      width: 90%;
+      height: 50px;
+      font-size: 2.5rem;
+    }
+  }
+  @media @mobile {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }// home
