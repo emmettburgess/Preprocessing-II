@@ -1,5 +1,27 @@
 .home {
 
+  header {
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  
+   @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      color: black;
+  
+      @media @mobile {
+        margin-bottom: 20px;
+      }
+    }// h1
+  }//header
+
   .content-section {
     margin: 30px 0;
     display: flex;
